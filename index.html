@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="screen.css">
+
+</head>
+  <body>
+    <div class="container">
+        <h1>Crooked Style Sheets <small>Website tracking/analytics without JS only with CSS</small></h1>
+        <hr>
+        
+        <h2>Link tests</h2>
+
+        <a href="http://google.de" id="link1" target="_blank">Link 1</a>
+        <a href="http://foo.bar" id="link2" target="_blank">Link2</a>
+        <br>
+        <b>Tracking even works if it is not an external link:</b>
+        <a href="http://github.com" id="link3">Link 3</a>
+
+        <hr>
+        <h2>Hover test</h2>
+
+      Hover over the fields with your mouse, so you can see how it can be tracked.
+
+        <table>
+          <tr>
+            <td>
+              <div id="s1" class="field">Field 1</div>
+            </td>
+            <td></td>
+            <td>
+                <div id="s2" class="field">Field 2</div>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                <div id="s3" class="field">Field 3</div>
+              </td>
+              <td></td>
+              <td>
+                  <div id="s4" class="field">Field 4</div>
+              </td>
+            </tr>
+        </table>
+
+        <hr>
+        
+        <h2>Hover duration time <small>Based on idea from <a href="https://github.com/jeyroik">jeyroik</a></small></h2>
+
+        <div id="duration" class="field">Duration field</div>
+
+        <hr>
+        <h2>Input tests <small>Note that you don't need to submit any form for data tracking</small></h2>
+        Input "test" (without quotes) in the following text box and it will be detected:
+        <input type="text" id="text_input" pattern="^test$" required>
+        <br>
+        <label><input type="checkbox" id="checkbox"> Check this box and it will be tracked</label>
+
+        <hr>
+
+        <!-- These empty divs are used to determine information about the users system -->
+        <div id="type"></div>
+        <div id="orientation"></div>
+        <div id="width"></div>
+        <div id="height"></div>
+        <div id="chrome_detect"></div>
+        <div id="firefox_detect"></div>
+        <div id="edge_detect"></div>
+
+        <div id="font_detection1">test</div>
+
+        <a href="results.php" target="_blank">Watch Results</a>
+
+        <br>
+
+        <a href="track.php?action=reset" target="_blank">Reset results</a>
+
+        <br>
+
+        <a href="https://github.com/jbtronics/CrookedStyleSheets">Github Repo</a>
+    </div>
+  </body>
+</html>
